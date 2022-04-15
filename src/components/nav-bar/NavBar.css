@@ -1,0 +1,15 @@
+.navContainer {
+  align-items: center;
+  padding: 1.5rem 0rem;
+}
+
+.nav {
+  text-align: center;
+}
+
+.navItems {
+  text-align: center;
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-evenly;
+}
