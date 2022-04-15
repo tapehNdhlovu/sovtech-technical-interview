@@ -1,0 +1,12 @@
+.peopleDataCard {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-evenly;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+#card {
+  margin: -2rem;
+}
