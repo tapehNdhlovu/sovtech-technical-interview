@@ -4,6 +4,7 @@ import Form from "react-bootstrap/Form";
 import { Button } from "react-bootstrap";
 import { useLazyQuery, gql } from "@apollo/client";
 import ViewCard from "../../components/view-card/ViewCard";
+import Loader from "../../components/loader/Loader";
 
 const GET_PERSON = gql`
   query getPerson($pathString: String) {
@@ -30,7 +31,7 @@ export default function Search() {
       <div>
         <NavBar />
         <h4 className="homePageTitle">Search for a person</h4>
-        <div>
+        <div style={{ marginBottom: "2rem" }}>
           <Form>
             <Form.Group className="mb-3">
               <Form.Control
@@ -56,8 +57,12 @@ export default function Search() {
             </Button>
           </Form>
         </div>
-        {loading && <div>Spinner...</div>}
-        {error && <div>Something went wrong</div>}
+        {loading && (
+          <div>
+            <Loader />
+          </div>
+        )}
+        {error && <div>Something went wrong!</div>}
         {data && <ViewCard dataOfAllPeople={data} />}
       </div>
     </div>

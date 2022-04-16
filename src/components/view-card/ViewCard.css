@@ -10,3 +10,7 @@
 #card {
   margin: -2rem;
 }
+
+#new-page-button {
+  cursor: pointer;
+}

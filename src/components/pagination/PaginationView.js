@@ -8,7 +8,7 @@ export default function PaginationView() {
   const navigate = useNavigate();
   const { pageNumber } = useParams();
   let defined = true;
-  if (pageNumber == undefined) {
+  if (pageNumber === undefined) {
     defined = false;
   }
 
@@ -25,7 +25,7 @@ export default function PaginationView() {
 
   const setActivePage = (item) => {
     let page = item + 1;
-    if (page == 1 && defined == false) {
+    if (page === 1 && defined === false) {
     } else {
       navigate(`/page/${page}`);
     }
