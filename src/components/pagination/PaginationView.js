@@ -1,7 +1,6 @@
 import * as React from "react";
 import { useState } from "react";
 import Pagination from "react-bootstrap/Pagination";
-import { Link } from "react-router-dom";
 import { useParams } from "react-router";
 import { useNavigate } from "react-router-dom";
 
