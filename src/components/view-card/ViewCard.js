@@ -22,11 +22,16 @@ export default function ViewCard({ dataOfAllPeople }) {
   };
 
   return (
-    <div className="peopleDataCard">
-      <Row style={{ marginBottom: "2rem" }}>
+    <div className="peopleDataCard justify-content-center">
+      <Row
+        style={{
+          marginBottom: "2rem",
+        }}
+        className="justify-content-center"
+      >
         {dataOfAllPeople.people.results.map((person, i) => {
           return (
-            <Col>
+            <Col className="col d-flex justify-content-center">
               <Card
                 style={{
                   width: "25rem",

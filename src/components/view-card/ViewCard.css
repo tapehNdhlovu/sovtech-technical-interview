@@ -2,9 +2,10 @@
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
-  justify-content: space-evenly;
+  justify-content: space-between;
   margin-top: 1rem;
   margin-bottom: 1rem;
+  border: 1px solid black;
 }
 
 #card {
