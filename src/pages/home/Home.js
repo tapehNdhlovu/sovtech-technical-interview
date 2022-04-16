@@ -9,7 +9,7 @@ export default function Home() {
   //const [peopleData, setPeopleData] = useState();
   const { error, loading, data } = useGetAllPeople();
 
-  if (loading) return <div>Spinner...</div>;
+  if (loading) return <div>Loading...</div>;
   if (error) return <div>Something went wrong!</div>;
   //setPeopleData(data);
   //console.log(data);
