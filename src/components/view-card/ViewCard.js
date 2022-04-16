@@ -26,8 +26,8 @@ export default function ViewCard({ dataOfAllPeople }) {
         {dataOfAllPeople.people.results.map((person, i) => {
           return (
             <Col>
-              <Box m={1} pt={1}>
-                <Card id="card" key={i} sx={{ minWidth: 270 }}>
+              <Box m={1} key={i} mb={2} pt={1}>
+                <Card id="card" sx={{ minWidth: 270 }}>
                   <CardContent>
                     <Typography variant="h5" component="div">
                       Name: {person.name}

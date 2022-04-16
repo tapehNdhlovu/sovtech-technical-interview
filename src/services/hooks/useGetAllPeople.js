@@ -3,7 +3,7 @@ import { useQuery, gql } from "@apollo/client";
 
 const GET_ALL_PEOPLE = gql`
   query {
-    people @rest(path: "people/") {
+    people @rest(path: "people/", type: "AllPeople") {
       results {
         name
         height

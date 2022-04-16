@@ -3,6 +3,7 @@ import "./Home.css";
 import ViewCard from "../../components/view-card/ViewCard";
 import NavBar from "../../components/nav-bar/NavBar";
 import { useGetAllPeople } from "../../services/hooks/useGetAllPeople";
+import PaginationView from "../../components/pagination/PaginationView";
 
 export default function Home() {
   //const [peopleData, setPeopleData] = useState();
@@ -19,6 +20,7 @@ export default function Home() {
         All people (https://swapi.dev/api/people/){" "}
       </h4>
       {data && <ViewCard dataOfAllPeople={data} />}
+      <PaginationView />
     </div>
   );
 }
