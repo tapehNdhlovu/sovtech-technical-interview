@@ -9,7 +9,7 @@ import NotFound from "./pages/not-found/NotFound";
 
 function App() {
   return (
-    <div className="App">
+    <div className="App justify-content-center">
       <Routes>
         <Route strict exact path="/" element={<Home />} />
         <Route strict exact path="/page/:pageNumber" element={<NewPage />} />
