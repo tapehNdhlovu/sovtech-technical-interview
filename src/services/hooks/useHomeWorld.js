@@ -2,7 +2,7 @@ import { useQuery, gql } from "@apollo/client";
 
 const GET_HOME_WORLD = gql`
   query getHomeWorld($pathString: String) {
-    homeworld @rest(path: $pathString) {
+    homeworld @rest(path: $pathString, type: "HomeWorld") {
       name
     }
   }
