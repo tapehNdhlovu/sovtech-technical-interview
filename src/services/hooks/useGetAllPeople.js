@@ -16,7 +16,9 @@ const GET_ALL_PEOPLE = gql`
 `;
 
 export const useGetAllPeople = () => {
-  const { error, data, loading } = useQuery(GET_ALL_PEOPLE);
+  const { error, data, loading } = useQuery(GET_ALL_PEOPLE, {
+    fetchPolicy: "cache-and-network",
+  });
 
   //console.log(homeWorldId);
 
