@@ -1,10 +1,10 @@
 import React from "react";
 import Card from "react-bootstrap/Card";
 import { Row, Col, Button, ListGroup, ListGroupItem } from "react-bootstrap";
-import { useNavigate } from "react-router-dom";
+import { useBack } from "use-back";
 
 export default function PersonView({ personDetails }) {
-  let navigate = useNavigate();
+  const { hasBack, handleBack } = useBack();
 
   return (
     <div>
@@ -37,7 +37,7 @@ export default function PersonView({ personDetails }) {
       <div className="col d-flex justify-content-center">
         <Row>
           <Button
-            onClick={navigate(-1)}
+            onClick={handleBack}
             style={{ margin: "0.5rem" }}
             variant="outline-primary"
             size="sm"

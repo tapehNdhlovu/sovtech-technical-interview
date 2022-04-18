@@ -26,6 +26,22 @@ export default function Search() {
   const [getPersonDetails, { loading, error, data, called }] =
     useLazyQuery(GET_PERSON);
 
+  const checkIfPersonIsAvailable = () => {
+    if (data.people.results.length != 1) {
+      return (
+        <div className="col d-flex justify-content-center">
+          <h4>Person not found.</h4>
+        </div>
+      );
+    } else {
+      return (
+        <div>
+          <ViewCard dataOfAllPeople={data} />
+        </div>
+      );
+    }
+  };
+
   return (
     <div>
       <div>
@@ -63,7 +79,7 @@ export default function Search() {
           </div>
         )}
         {error && <div>Something went wrong!</div>}
-        {data && <ViewCard dataOfAllPeople={data} />}
+        {data && checkIfPersonIsAvailable()}
       </div>
     </div>
   );
